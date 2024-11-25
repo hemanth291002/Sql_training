@@ -25,6 +25,8 @@ insert into Departments values (10,'Design','Pune'),(20,'Development','Pune'),
 (30,'Testing','Mumbai'),
 (40,'Document', 'Mumbai');
 
+select *from Departments;
+
 create table Employees(
 Empno int primary key,
 Ename varchar(20) not null,
@@ -43,6 +45,8 @@ insert into Employees values (7001,'Sandeep','Analyst',25000, 10),
 (7009 ,'Nutan' ,'Developer' ,45000 ,20),
 (7010 ,'Smita' ,'Analyst' ,20000 ,10),
 (7011 ,'Anand' ,'Project Mgr' ,65000 ,10);
+
+select *from Employees;
 
 create table Projects(
 Project_ID int primary key,

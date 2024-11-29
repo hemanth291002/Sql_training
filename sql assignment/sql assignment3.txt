@@ -1,0 +1,76 @@
+----continuous of assignment3
+
+select*from Dept
+select*from Emp
+ 
+------1)
+select * from Emp where Job='Manager'
+ 
+-----2)
+select Ename,Sal from Emp Where Sal>1000
+ 
+ 
+-------3)
+select Ename,Sal from Emp where Ename not like'James'
+ 
+ 
+------ 4)
+select * from Emp where Ename like'S%'
+ 
+--------- 5)
+select Ename from Emp where Ename like'%a%'
+ 
+----------6)
+select EName from Emp where Ename like'__l%'
+ 
+-----------7)
+select Ename,Sal=Sal/30 from Emp Where Ename='Jones'
+ 
+ 
+----------8)
+select Sum(Sal) as 'Total Salary of all Employee' from Emp
+ 
+-------------9)
+select Avg(Sal*12)as'Average annual salary' from Emp
+ 
+------------10)
+select Ename,Job,Sal,Deptno from Emp where job not like'Salesman'
+ 
+ 
+----------------11)
+select distinct deptno from Emp
+ 
+ 
+---------12)
+select Ename,Sal,Deptno from Emp where Sal>1500 and Deptno in(10,30)
+ 
+ 
+--------------13)
+select Ename,Job,Sal from Emp where Job in('Manager','Analyst')and Sal not in(1000,3000,5000)
+ 
+ 
+------------14)
+select Ename,Sal=sal+sal*0.1,Comm from Emp where comm>sal
+ 
+ 
+-----------15)
+select Ename from Emp where Ename like'%ls%' and (Deptno=30 or MGR_Id=7782)
+ 
+ 
+------16)--
+ 
+select Ename, HireDate, 
+       datediff(year, HireDate, getdate()) AS ' Experience'
+from emp
+where datediff(year, HireDate, getDate()) > 30
+  and datediff(year, HireDate, getdate()) < 40;
+select count(*) AS 'Total employee'
+from Emp
+where datediff(year, HireDate, getdate()) > 30
+  and datediff(year, HireDate, getDate()) < 40;
+ 
+ 
+ 
+--------------17)
+select d.Dname as Department_Name, e.Ename as Employee_Name FROM EMP e join Dept d ON e.Deptno = d.Deptno order by  e.Ename desc,d.Dname Asc
+ 
